@@ -14,11 +14,17 @@ With **γ = 0.5** (half the vocabulary is "green"), unwatermarked text has ~50% 
 
 This library generates a **zero-knowledge STARK proof** that the green count exceeds the threshold, allowing a public verifier to confirm watermark detection without knowing the secret key.
 
+## ⚠️ Disclaimer
+
+This project is a PoC provided for experimental purposes only.  
+It has **not** been audited for security, correctness, or performance, and **must not be used in production**.
+
 ## CLI Usage
 
 ### Installation
 
 **Quick setup** (automated):
+
 ```bash
 bash cli/setup.sh
 source .venv/bin/activate
