@@ -1,0 +1,25 @@
+[package]
+name = "zunigram-py"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Python bindings for zunigram Poseidon2 PRF"
+
+[lib]
+name = "zunigram_py"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module"] }
+
+air = { path = "../air" }
+common = { path = "../common" }
+
+stwo = { git = "https://github.com/starkware-libs/stwo.git", rev = "2fdab76", features = [
+    "prover",
+    "parallel",
+] }
+
+[build-dependencies]
+pyo3-build-config = "0.22"
+

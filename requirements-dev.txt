@@ -1,0 +1,14 @@
+# Development dependencies for zunigram
+
+# Testing
+pytest>=7.0.0
+pytest-timeout>=2.1.0
+
+# For building Python bindings
+maturin>=1.4.0
+
+# Code quality (optional)
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0
+

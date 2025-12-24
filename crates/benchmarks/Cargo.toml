@@ -1,0 +1,22 @@
+[package]
+name = "benchmarks"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Benchmarks for Zunigram unigram watermark detection"
+
+[dependencies]
+common = { workspace = true }
+air = { workspace = true }
+prover = { workspace = true }
+verifier = { workspace = true }
+stwo = { workspace = true }
+criterion = { workspace = true }
+rand = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+[[bin]]
+name = "benchmark"
+path = "src/main.rs"
+

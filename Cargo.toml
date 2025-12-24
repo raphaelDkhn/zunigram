@@ -1,0 +1,43 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+exclude = ["crates/zunigram-py"]  # Built separately with maturin
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+# Stwo dependencies
+stwo = { git = "https://github.com/starkware-libs/stwo.git", rev = "2fdab76", features = [
+    "prover",
+    "parallel",
+] }
+stwo-constraint-framework = { git = "https://github.com/starkware-libs/stwo.git", rev = "2fdab76", features = [
+    "prover",
+    "parallel",
+] }
+
+# Internal crates
+air = { path = "crates/air" }
+prover = { path = "crates/prover" }
+verifier = { path = "crates/verifier" }
+common = { path = "crates/common" }
+
+# Common dependencies
+rayon = "1.10"
+itertools = { version = "0.12", default-features = false, features = [
+    "use_alloc",
+] }
+num-traits = { version = "0.2", default-features = false }
+rand = { version = "0.8", features = ["std", "std_rng"] }
+tracing = { version = "0.1", default-features = false }
+bytemuck = { version = "1.14", features = ["derive"] }
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+
+# Dev dependencies
+test-log = { version = "0.2", features = ["trace"] }
+tracing-subscriber = "0.3"
+criterion = { version = "0.5", features = ["html_reports"] }

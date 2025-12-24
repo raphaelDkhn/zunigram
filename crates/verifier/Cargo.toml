@@ -1,0 +1,19 @@
+[package]
+name = "verifier"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Verifier for unigram watermark detection proofs"
+
+[dependencies]
+air = { workspace = true }
+common = { workspace = true }
+stwo = { workspace = true }
+stwo-constraint-framework = { workspace = true }
+num-traits = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+test-log = { workspace = true }
+tracing-subscriber = { workspace = true }
+
